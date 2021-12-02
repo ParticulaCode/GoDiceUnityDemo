@@ -1,0 +1,24 @@
+{
+    "name": "GoDice.App.Modules.Simulation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:58f1591952d6a3c4c9116318ea55d250",
+        "GUID:b62fc2f2a104a4d4782f62625512b2f7",
+        "GUID:4727d604099bc7e4888bcc88df2910f3",
+        "GUID:6b44886240d8f5b4ba43ff3255d46cac",
+        "GUID:c8e94838933b2e845919dc48531ae674",
+        "GUID:732d07b358f1f9a4a98fbb8d9b892e35",
+        "GUID:dbc5e1fdb84daad4e8a5e4737ecb8eeb",
+        "GUID:5c52cfd83993a8d4b9bccd5f17da1b60",
+        "GUID:c1d67a5e8e242f1409992fd0db71296a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

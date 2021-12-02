@@ -1,0 +1,17 @@
+{
+    "name": "FrostLib.Containers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6b44886240d8f5b4ba43ff3255d46cac",
+        "GUID:e810bb1c3cb21fa41863d892633f305d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

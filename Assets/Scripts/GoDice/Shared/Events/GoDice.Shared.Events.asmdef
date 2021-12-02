@@ -1,0 +1,17 @@
+{
+    "name": "GoDice.Shared.Events",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dbc5e1fdb84daad4e8a5e4737ecb8eeb",
+        "GUID:732d07b358f1f9a4a98fbb8d9b892e35"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

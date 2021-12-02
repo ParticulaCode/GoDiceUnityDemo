@@ -1,0 +1,20 @@
+{
+    "name": "GoDice.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:58f1591952d6a3c4c9116318ea55d250",
+        "GUID:b62fc2f2a104a4d4782f62625512b2f7",
+        "GUID:b4aacb086f563044ea381256459929fe"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

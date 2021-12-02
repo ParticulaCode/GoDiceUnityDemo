@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f147868b1df4cf09e4dbb990a9026b2, type: 3}
+  m_Name: DieValues
+  m_EditorClassIdentifier: 
+  _values:
+  - {fileID: 21300000, guid: 85b04698a5df77741b8bcbfe5db03f77, type: 3}
+  - {fileID: 21300000, guid: 340a701b3d0078d4e9e02fa7cc003123, type: 3}
+  - {fileID: 21300000, guid: 823d36362023ea049877f73a474d34b2, type: 3}
+  - {fileID: 21300000, guid: 1040022f3dab6a54a84f14bc9b968834, type: 3}
+  - {fileID: 21300000, guid: d4e37f2c17737284d90b561536558eb3, type: 3}
+  - {fileID: 21300000, guid: d7c29820636318b45a39df885a1d33dc, type: 3}
+  _unknownValue: {fileID: 21300000, guid: babea6516c48c5647af848d9aa0def54, type: 3}
+  _shellSprite: {fileID: 21300000, guid: ae5c186f8a7941849b57bdb94048f3be, type: 3}
