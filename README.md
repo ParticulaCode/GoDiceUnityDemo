@@ -2,15 +2,15 @@
 This is a demo project on how you can communicate with GoDice. Use it as a reference or starting point for your own application.
 
 TL;DR
-- The project is fully workable and demonstrates some of features of GoDice
+- The project is fully workable and demonstrates some of features of GoDice, but you need to use a third party Bluetooth plugin
 - Code is based on the GoDice companion app. Yet some parts are changed for demonstration sake and simplicity.
 - You can also extract read-write protocols for bluetooth communication with GoDice. It contains all current events, but may be extended in future.
 - Mapping for d20 and d24 shells also included. It's very easy to switch die's shell and parse die's output to a shell's value.
-- Currently project is based on Unity 2021.2.4f1, but most likely you can open it with recent major versions as well.
+- Currently project is based on Unity 2021.2.4f1. If you open the project with a previous major version of Unity, there is a great chance that scripting define symbols will be missing and this will cause compilation errors. To fix it, add the following defines  `USE_ODIN_MOCKUP;DICE_DEBUG;BLUETOOTH_DEBUG;BLUETOOTH_OPERATIONS_DEBUG`
 
 # External dependencies
 
-- Bluetooth plugin is not included in this repository due to legal issues. We strongly recommend using this plugin [Bluetooth LE for iOS, tvOS and Android](https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661). Just import it to the project and everything is supposed to compile. If you want to use another plugin for bluetooth communication, you have to make your own implementation of `IBluetoothBridge` and disable `USE_BLE_PLUGIN` define.
+- Bluetooth plugin is not included in this repository due to legal issues. We strongly recommend using this plugin [Bluetooth LE for iOS, tvOS and Android](https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661). Just import it to the project, then add `USE_BLE_PLUGIN` define and everything is supposed to compile. If you want to use another plugin for bluetooth communication, you have to make your own implementation of `IBluetoothBridge` and disable `USE_BLE_PLUGIN` define.
 - FrostLib is an in-house set of scripts.
 - We encourage you to also add [Odin Inspector](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041) to the project. It will provide you with a better inspector for simulated dice. And this is an awesome plugin in general. By default demo project has `OdinMockup` assembly to keep the code compiled, but you if you add Odin Inspector and disable `USE_ODIN_MOCKUP` 
 
