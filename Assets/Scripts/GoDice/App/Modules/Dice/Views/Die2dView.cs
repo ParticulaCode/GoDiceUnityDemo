@@ -76,6 +76,10 @@ namespace GoDice.App.Modules.Dice.Views
             }
         }
 
-        public void EndRoll(int value) => StopRollRoutine();
+        public void EndRoll(int value)
+        {
+            StopRollRoutine();
+            UpdateValue(value);
+        }
     }
 }
