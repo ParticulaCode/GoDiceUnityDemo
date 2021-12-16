@@ -1,4 +1,4 @@
-﻿#if USE_BLE_PLUGIN
+#if USE_BLE_PLUGIN
 using System;
 using FrostLib.Signals.impl;
 using GoDice.App.Modules.Bluetooth.Characteristics;
@@ -16,7 +16,7 @@ namespace GoDice.App.Modules.Bluetooth.Bridge
             Action<string> onPeripheralDisconnected, Action<string> onLog)
         {
             _onDisconnect = onPeripheralDisconnected;
-            BluetoothLEHardwareInterface.Initialize(true, false, onSuccess, onError, onLog);
+            BluetoothLEHardwareInterface.Initialize(true, false, onSuccess, onError);
         }
 
         void IBluetoothBridge.ChangeDeviceBluetoothState(bool enable) =>
@@ -87,10 +87,11 @@ namespace GoDice.App.Modules.Bluetooth.Bridge
             => BluetoothLEHardwareInterface.SubscribeCharacteristicWithDeviceAddress(ch.Address,
                 ch.Service, ch.Id, notificationAction, action);
 
-        ///OnSucess will return device address
+        /// OnSucess will return device address
+        /// Cast to byte[] as a quick workaround for recent changes in BLE plugin
         void IBluetoothBridge.WriteCharacteristic(Characteristic ch, sbyte[] data, bool withReponse,
             Action<string> onSuccess)
-            => BluetoothLEHardwareInterface.WriteCharacteristic(ch.Address, ch.Service, ch.Id, data,
+            => BluetoothLEHardwareInterface.WriteCharacteristic(ch.Address, ch.Service, ch.Id, (byte[])(Array)data,
                 data.Length, withReponse, onSuccess);
     }
 }
