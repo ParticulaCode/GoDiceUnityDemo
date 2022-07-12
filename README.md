@@ -12,9 +12,9 @@ TL;DR
 
 - Bluetooth plugin is not included in this repository due to legal issues. We strongly recommend using this plugin [Bluetooth LE for iOS, tvOS and Android](https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661). To add the Plugin to the project, do the following:
 1. Import the BLE plugin to the project.
-2. Enter the "Project Setting" and Add the `USE_BLE_PLUGIN` definition to the "Scripting Define Symbols" section. Click Apply.
-3. Create an Assembly Definition to the BLE plugin by entering the plugin folder ("Assets\Plugins") then right click on the folder, choose Create and select Assembly Definition and name it BLE.
-4. Enter the folder "Assets\Scripts\GoDice\App\Modules\Bluetooth", click the assembly refernece file GoDice.App.Modules.Bluetooth and reference `BLE` assembly definition (from previous step) to the Assembly Definition Reference list (by dragging it to the end of the list), now everything supposed to compile. Click Apply.
+2. Enter the "Project Setting" and add the `USE_BLE_PLUGIN` definition to the "Scripting Define Symbols" section. Click Apply.
+3. Create an Assembly Definition to the BLE plugin by entering the plugin folder ("Assets\Plugins") then right click on the folder, choose Create, then select Assembly Definition and name it BLE.
+4. Enter the folder "Assets\Scripts\GoDice\App\Modules\Bluetooth", click the assembly refernece file GoDice.App.Modules.Bluetooth and reference `BLE` assembly definition (from previous step) to the Assembly Definition Reference list (by dragging it to the end of the list), click Apply. Now everything supposed to compile.
 
 If you want to use another plugin for bluetooth communication, you have to make your own implementation of `IBluetoothBridge` and disable `USE_BLE_PLUGIN` define.
 - FrostLib is an in-house set of scripts.
