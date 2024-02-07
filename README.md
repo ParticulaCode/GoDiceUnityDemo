@@ -13,8 +13,8 @@ TL;DR
 - Bluetooth plugin is not included in this repository due to legal issues. We strongly recommend using this plugin [Bluetooth LE for iOS, tvOS and Android](https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661). To add the Plugin to the project, do the following:
 1. Make sure your current platform in Unity is either Android or iOS
 2. Import the BLE plugin to the project.
-3. Create an Assembly Definition to the BLE plugin by entering the plugin's folder ("Assets\Plugins\BLE Plugin\Lib") then right click on the folder, choose Create, then select Assembly Definition and name it BLE.
-4. Enter the folder "Assets\Scripts\GoDice\App\Modules\Bluetooth", click the assembly refernece file GoDice.App.Modules.Bluetooth and reference `BLE` assembly definition (from previous step) to the Assembly Definition Reference list (by dragging it to the end of the list), click Apply. Now everything supposed to compile.
+3. Feel free to reorder plugin's content as you like, but make sure to create an Assembly Definition (BLE in our case) for these scripts:<img src="https://github.com/ParticulaCode/GoDiceUnityDemo/assets/50739566/9ef7dbbc-07d5-49b8-8819-44d9b0b6ab60" width="200" alignment="right">
+4. Go to the folder `"Assets\Scripts\GoDice\App\Modules\Bluetooth"`, click the assembly refernece file `GoDice.App.Modules.Bluetooth` and the reference to `BLE` assembly definition (from the previous step) to the Assembly Definition Reference list (by dragging it to the end of the list), click Apply. Now everything supposed to compile.
 5. Enter the "Project Setting" and add the `USE_BLE_PLUGIN` definition to the "Scripting Define Symbols" section. Click Apply.
 
 If you want to use another plugin for bluetooth communication, you have to make your own implementation of `IBluetoothBridge` and disable `USE_BLE_PLUGIN` define.
