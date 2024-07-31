@@ -9,7 +9,7 @@ TL;DR
 - Code is based on the GoDice companion app. Yet some parts are changed for demonstration sake and simplicity.
 - You can also extract read-write protocols for bluetooth communication with GoDice. It contains all current events, but may be extended in future.
 - Mapping for d20 and d24 shells also included. It's very easy to switch die's shell and parse die's output to a shell's value.
-- Currently project is based on Unity 2021.2.4f1. If you open the project with a previous major version of Unity, there is a great chance that scripting define symbols will be missing and this will cause compilation errors. To fix it, add the following defines `USE_ODIN_MOCKUP;DICE_DEBUG;BLUETOOTH_DEBUG;BLUETOOTH_OPERATIONS_DEBUG`
+- Currently project is based on Unity `2023.2.20f1`. It probabbly should work just fine with any previous major version of Unity. But there is a great chance that scripting define symbols will be missing and this will cause compilation errors. To fix it, add the following defines `USE_ODIN_MOCKUP;DICE_DEBUG;BLUETOOTH_DEBUG;BLUETOOTH_OPERATIONS_DEBUG`
 
 # External dependencies
 
