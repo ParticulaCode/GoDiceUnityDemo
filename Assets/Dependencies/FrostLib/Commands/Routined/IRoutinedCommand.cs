@@ -2,7 +2,7 @@
 
 namespace FrostLib.Commands.Routined
 {
-    public interface ICommand : ICommand<IEnumerator>
+    public interface IRoutinedCommand : ICommand<IEnumerator>
     {
     }
 }

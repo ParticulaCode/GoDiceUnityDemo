@@ -7,6 +7,7 @@
         public const string FailuresTrackers = "FailuresTrackers";
         public const string TurnsTracker = "TurnsTracker";
         public const string RoundsTracker = "RoundsTracker";
+        public const string HitPointsTracker = "HitPointsTracker";
 
         public const string PlayersToSkipTurn = "PlayersToSkipTurn";
 
@@ -14,8 +15,12 @@
         public const string PlayBtn = "PlayBtn";
 
         // ReSharper disable once InconsistentNaming
-        public const string DiceSelectionDialogInstaller = "SelectionDialogInstaller";
+        //public const string DiceSelectionDialogInstaller = "SelectionDialogInstaller";
 
         public const string InputActivator = "InputActivator";
+        public const string DiceValues = "DiceValues";
+        public const string Clickables = "Clickables";
+        
+        public const string InputAndUndoMockSwappers = "InputAndUndoMockSwappers";
     }
 }

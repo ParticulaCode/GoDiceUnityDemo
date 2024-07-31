@@ -1,0 +1,17 @@
+{
+    "name": "FrostLib.Tasks",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e69014c04d1c5784fb145731be3e2792",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

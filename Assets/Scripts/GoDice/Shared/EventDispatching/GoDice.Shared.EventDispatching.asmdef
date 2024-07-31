@@ -1,21 +1,25 @@
 {
-    "name": "GoDice.Shared.EventDispatching",
-    "rootNamespace": "",
-    "references": [
-        "GUID:929169fc5a2b154438986e818a83c805",
-        "GUID:6b44886240d8f5b4ba43ff3255d46cac",
-        "GUID:c8e94838933b2e845919dc48531ae674",
-        "GUID:b62fc2f2a104a4d4782f62625512b2f7",
-        "GUID:cfa0a0afcad415343a47c701fe78ba3f",
-        "GUID:4727d604099bc7e4888bcc88df2910f3"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GoDice.Shared.EventDispatching",
+  "rootNamespace": "",
+  "references": [
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:e810bb1c3cb21fa41863d892633f305d",
+    "GUID:929169fc5a2b154438986e818a83c805",
+    "GUID:6b44886240d8f5b4ba43ff3255d46cac",
+    "GUID:c8e94838933b2e845919dc48531ae674",
+    "GUID:b62fc2f2a104a4d4782f62625512b2f7",
+    "GUID:cfa0a0afcad415343a47c701fe78ba3f",
+    "GUID:4727d604099bc7e4888bcc88df2910f3",
+    "GUID:5b60568e79820b44d9468050705bb601",
+    "GUID:6adb49be4871b094fa764c59eae51f05"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

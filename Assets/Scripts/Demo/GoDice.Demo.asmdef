@@ -2,7 +2,9 @@
     "name": "GoDice.Demo",
     "rootNamespace": "",
     "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:e810bb1c3cb21fa41863d892633f305d",
+        "GUID:5b60568e79820b44d9468050705bb601",
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
         "GUID:1f7d7ce07ed22f64b92e149c10c5ed81",
         "GUID:929169fc5a2b154438986e818a83c805",
@@ -13,7 +15,8 @@
         "GUID:dbc5e1fdb84daad4e8a5e4737ecb8eeb",
         "GUID:c1d67a5e8e242f1409992fd0db71296a",
         "GUID:5c52cfd83993a8d4b9bccd5f17da1b60",
-        "GUID:b4aacb086f563044ea381256459929fe"
+        "GUID:b4aacb086f563044ea381256459929fe",
+        "GUID:007bacbcaeb1cb24c89b9c95a7609c09"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

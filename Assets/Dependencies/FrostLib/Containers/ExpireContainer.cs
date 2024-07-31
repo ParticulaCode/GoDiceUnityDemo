@@ -19,4 +19,11 @@ namespace FrostLib.Containers
 
         public void Refresh() => _lastTime = Time.time;
     }
+
+    public class ExpireContainer<T> : ExpireContainer
+    {
+        public T Item;
+
+        public ExpireContainer(T item, float ttl) : base(ttl) => Item = item;
+    }
 }

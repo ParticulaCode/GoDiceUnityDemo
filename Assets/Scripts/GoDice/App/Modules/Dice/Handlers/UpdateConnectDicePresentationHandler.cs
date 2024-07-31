@@ -1,8 +1,8 @@
 using System.Linq;
 using GoDice.App.Modules.Dice.Core;
 using GoDice.App.Modules.Dice.Presentation;
-using GoDice.Shared.EventDispatching;
 using GoDice.Shared.EventDispatching.Events;
+using GoDice.Shared.EventDispatching.Handlers;
 using GoDice.Shared.EventDispatching.Injections;
 using JetBrains.Annotations;
 

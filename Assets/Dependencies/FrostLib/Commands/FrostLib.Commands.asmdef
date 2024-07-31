@@ -1,6 +1,8 @@
 {
     "name": "FrostLib.Commands",
+    "rootNamespace": "",
     "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:b62fc2f2a104a4d4782f62625512b2f7",
         "GUID:6b44886240d8f5b4ba43ff3255d46cac",
         "GUID:929169fc5a2b154438986e818a83c805"
@@ -10,7 +12,7 @@
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

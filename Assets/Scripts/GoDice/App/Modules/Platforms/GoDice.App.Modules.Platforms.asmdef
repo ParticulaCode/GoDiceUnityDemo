@@ -1,0 +1,23 @@
+{
+  "name": "GoDice.App.Modules.Platforms",
+  "rootNamespace": "GoDice",
+  "references": [
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:472650cb3a7f77d4897af7547da2be99",
+    "GUID:b62fc2f2a104a4d4782f62625512b2f7",
+    "GUID:cfa0a0afcad415343a47c701fe78ba3f",
+    "GUID:ab4dd1d36a2621f42b00b84ed9aa0c83",
+    "GUID:422f6039de209484885b9335e5e89396",
+    "GUID:6adb49be4871b094fa764c59eae51f05",
+    "GUID:dbc5e1fdb84daad4e8a5e4737ecb8eeb"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

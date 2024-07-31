@@ -8,7 +8,7 @@ using JetBrains.Annotations;
 namespace GoDice.App.Modules.Dice
 {
     [UsedImplicitly]
-    public class DieRollHandler : Shared.EventDispatching.EventHandler
+    public class DieRollHandler : Shared.EventDispatching.Handlers.EventHandler
     {
         private readonly EventType _evType;
 

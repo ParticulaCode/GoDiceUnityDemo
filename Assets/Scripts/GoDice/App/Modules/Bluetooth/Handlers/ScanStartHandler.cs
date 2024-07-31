@@ -1,6 +1,6 @@
 ﻿using GoDice.App.Modules.Bluetooth.Events;
 using GoDice.App.Modules.Bluetooth.Scan;
-using GoDice.Shared.EventDispatching;
+using GoDice.Shared.EventDispatching.Handlers;
 using GoDice.Shared.EventDispatching.Injections;
 using JetBrains.Annotations;
 
@@ -18,7 +18,7 @@ namespace GoDice.App.Modules.Bluetooth
         public override void Handle()
         {
             var ev = EventAs<NewDevicesScanStartEvent>();
-            ev?.Respond(Scanner.GetNewDevicesSync());
+            ev?.Ok(Scanner.GetNewDevicesSync());
 
             var mode = EventAs<IScanStartEvent>().Mode;
             Scanner.SetMode(mode);

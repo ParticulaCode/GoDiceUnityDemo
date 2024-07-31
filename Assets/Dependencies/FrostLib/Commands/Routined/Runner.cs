@@ -10,12 +10,12 @@ namespace FrostLib.Commands.Routined
 {
     public class Runner : IDisposable
     {
-        public readonly Signal OnAllExecutionsFinished = new Signal();
+        public readonly Signal OnAllExecutionsFinished = new();
 
         public bool IsActive = true;
         public bool IsEmpty => _scheduled.Count == 0 && _activeRoutine == null;
 
-        private readonly Queue<ICommand> _scheduled = new Queue<ICommand>();
+        private readonly Queue<IRoutinedCommand> _scheduled = new();
 
         private readonly IRoutineRunner _routiner;
 
@@ -28,7 +28,7 @@ namespace FrostLib.Commands.Routined
             _routiner.StartRoutine(ProcessRoutined());
         }
 
-        public void Schedule(ICommand cmd)
+        public void Schedule(IRoutinedCommand cmd)
         {
             Log($"\tSchedule: {cmd}");
             _executionFinished = false;

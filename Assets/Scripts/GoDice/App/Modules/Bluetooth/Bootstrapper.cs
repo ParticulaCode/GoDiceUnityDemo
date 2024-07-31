@@ -1,8 +1,10 @@
 ﻿using FrostLib.Services;
 using GoDice.App.Modules.Bluetooth.Bridge;
+using GoDice.App.Modules.Bluetooth.Commands;
 using GoDice.App.Modules.Bluetooth.Devices;
 using GoDice.App.Modules.Bluetooth.Operations;
 using GoDice.App.Modules.Bluetooth.Scan;
+using GoDice.Shared.EventDispatching.Binding;
 using GoDice.Shared.EventDispatching.Dispatching;
 using UnityEngine;
 using static GoDice.Shared.EventDispatching.Events.EventType;
@@ -29,8 +31,13 @@ namespace GoDice.App.Modules.Bluetooth
             var connestionEstablisher = new ConnestionEstablisher(operationsRunner, reconnector);
             provider.Provide((IDeviceConnector) connestionEstablisher);
 
-            dispatcher.Bind<ConnectToDeviceRequestHandler>().To(ConnectToDeviceRequest);
-            dispatcher.Bind<ScanStartHandler>().To(NewDevicesScanStart);
+            dispatcher.Bind().Handler<ConnectToDeviceRequestHandler>().To(ConnectToDeviceRequest);
+
+            dispatcher.Bind()
+                .TaskCommand<RequestRuntimePermissionsCommand>()
+                .Handler<ScanStartHandler>()
+                .AsSequenceAsync()
+                .To(NewDevicesScanStart);
         }
     }
 }

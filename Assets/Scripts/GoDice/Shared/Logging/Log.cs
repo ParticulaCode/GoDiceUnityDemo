@@ -10,6 +10,8 @@ namespace GoDice.Shared.Logging
         Bluetooth,
         Operations,
         Dice,
+        Platforms,
+        Handlers
     }
 
     public static class Log
@@ -25,10 +27,15 @@ namespace GoDice.Shared.Logging
 #if DICE_DEBUG
             Mode.Dice,
 #endif
+#if PLATFORMS_DEBUG
+            Mode.Platforms,
+#endif
+#if HANDLERS_DEBUG
+            Mode.Handlers,
+#endif
         };
 
-        private static readonly Dictionary<Mode, ILogger> Loggers =
-            new Dictionary<Mode, ILogger>();
+        private static readonly Dictionary<Mode, ILogger> Loggers = new();
 
         static Log()
         {

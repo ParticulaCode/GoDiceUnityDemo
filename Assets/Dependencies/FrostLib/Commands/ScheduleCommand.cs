@@ -8,11 +8,11 @@ namespace FrostLib.Commands
         private static ServiceLocator Servicer => ServiceLocator.Instance;
         private static Runner Runner => Servicer.Get<Runner>();
 
-        private readonly Routined.ICommand _routinedCmd;
+        private readonly IRoutinedCommand _routinedCmd;
         private readonly ICommand _cmd;
 
-        public ScheduleCommand(Routined.ICommand cmd) => _routinedCmd = cmd;
-        
+        public ScheduleCommand(IRoutinedCommand cmd) => _routinedCmd = cmd;
+
         public ScheduleCommand(ICommand cmd) => _cmd = cmd;
 
         public void Execute()
@@ -23,7 +23,7 @@ namespace FrostLib.Commands
                 return;
             }
 
-            Runner.Schedule(new ScheduledActionCommand(_cmd.Execute));
+            Runner.Schedule(new ScheduledActionRoutinedCommand(_cmd.Execute));
         }
     }
 }

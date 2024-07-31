@@ -1,0 +1,14 @@
+{
+    "name": "FrostLib.Scenes",
+    "rootNamespace": "",
+    "references": ["GUID:e810bb1c3cb21fa41863d892633f305d"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

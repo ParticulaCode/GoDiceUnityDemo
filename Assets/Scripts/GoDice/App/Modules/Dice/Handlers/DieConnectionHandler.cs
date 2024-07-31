@@ -1,7 +1,7 @@
 ﻿using GoDice.App.Modules.Dice.Core;
 using GoDice.App.Modules.Dice.Events;
-using GoDice.Shared.EventDispatching;
 using GoDice.Shared.EventDispatching.Events;
+using GoDice.Shared.EventDispatching.Handlers;
 using JetBrains.Annotations;
 
 namespace GoDice.App.Modules.Dice

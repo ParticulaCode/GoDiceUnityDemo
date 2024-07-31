@@ -58,7 +58,7 @@ namespace GoDice.Shared.EventDispatching.Dispatching
                         BindingFlags.Instance
                         | BindingFlags.NonPublic
                         | BindingFlags.Public)
-                    .Where((propInfo, i) => IsAttribute<TA>(propInfo))
+                    .Where((propInfo, _) => IsAttribute<TA>(propInfo))
                     .Select(propInfo => new Record(propInfo, GetTag(propInfo))));
 
                 targetType = targetType.BaseType;

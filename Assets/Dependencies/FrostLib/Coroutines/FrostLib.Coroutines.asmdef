@@ -1,14 +1,16 @@
 {
     "name": "FrostLib.Coroutines",
+    "rootNamespace": "",
     "references": [
-        "GUID:b62fc2f2a104a4d4782f62625512b2f7"
+        "GUID:b62fc2f2a104a4d4782f62625512b2f7",
+        "GUID:e69014c04d1c5784fb145731be3e2792"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

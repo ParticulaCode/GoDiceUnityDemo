@@ -1,6 +1,6 @@
 ﻿using GoDice.Shared.EventDispatching.Events;
 
-namespace GoDice.Shared.EventDispatching
+namespace GoDice.Shared.EventDispatching.Handlers
 {
     public abstract class EventHandler : EventHandlerBase, IHandler
     {

@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace FrostLib.Commands
+﻿namespace FrostLib.Commands
 {
     public interface ICommand
     {
@@ -10,10 +8,5 @@ namespace FrostLib.Commands
     public interface ICommand<out T>
     {
         T Execute();
-    }
-    
-    public interface ICommandAsync<T>
-    {
-        Task<T> Execute();
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using GoDice.App.Modules.Bluetooth.Events;
 using GoDice.App.Modules.Dice.Commands;
 using GoDice.App.Modules.Dice.Core;
@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 namespace GoDice.App.Modules.Dice
 {
     [UsedImplicitly]
-    internal class CreateDieForNewDeviceHandler : Shared.EventDispatching.EventHandler
+    internal class CreateDieForNewDeviceHandler : Shared.EventDispatching.Handlers.EventHandler
     {
         [Inject] private Holder DiceHolder { get; set; }
 
@@ -24,7 +24,7 @@ namespace GoDice.App.Modules.Dice
             if (die != null)
                 return;
 
-            var data = new DieData()
+            var data = new DieData
             {
                 Id = Guid.NewGuid(),
                 DeviceId = device.Id,

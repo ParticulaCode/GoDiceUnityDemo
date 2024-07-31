@@ -7,7 +7,7 @@ namespace FrostLib.Containers.Rx
         public static implicit operator T(Reactive<T> self) => self.Value;
 
         public T Value { get; private set; }
-        public Signal<T> OnChange { get; } = new Signal<T>();
+        public Signal<T> OnChange { get; } = new();
 
         private readonly bool _setOnlyNewValue;
 
@@ -30,6 +30,6 @@ namespace FrostLib.Containers.Rx
 
         public override string ToString() => Value.ToString();
 
-        public ReadonlyReactive<T> ToReadonly() => new ReadonlyReactive<T>(this);
+        public ReadonlyReactive<T> ToReadonly() => new(this);
     }
 }

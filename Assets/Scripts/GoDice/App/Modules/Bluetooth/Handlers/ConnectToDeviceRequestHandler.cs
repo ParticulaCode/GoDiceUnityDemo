@@ -1,6 +1,6 @@
 ﻿using GoDice.App.Modules.Bluetooth.Devices;
 using GoDice.App.Modules.Bluetooth.Events;
-using GoDice.Shared.EventDispatching;
+using GoDice.Shared.EventDispatching.Handlers;
 using GoDice.Shared.EventDispatching.Injections;
 using JetBrains.Annotations;
 
@@ -18,7 +18,7 @@ namespace GoDice.App.Modules.Bluetooth
         public override void Handle()
         {
             var ev = EventAs<ConnectToDeviceRequestEvent>();
-            Connector.Connect(ev.Device, ev.Respond);
+            Connector.Connect(ev.Device, ev.Ok);
         }
     }
 }

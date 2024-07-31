@@ -2,6 +2,7 @@
 using GoDice.App.Modules.Dice.Core;
 using GoDice.App.Modules.Dice.Debugging;
 using GoDice.App.Modules.Dice.Presentation;
+using GoDice.Shared.EventDispatching.Binding;
 using GoDice.Shared.EventDispatching.Dispatching;
 using UnityEngine;
 using static GoDice.Shared.EventDispatching.Events.EventType;
@@ -34,30 +35,34 @@ namespace GoDice.App.Modules.Dice
 
         private static void BindHandlers(IEventDispatcher dispatcher)
         {
-            dispatcher.Bind<DieConnectionHandler>().Then<UpdateConnectDicePresentationHandler>()
+            dispatcher.Bind()
+                .Handler<DieConnectionHandler>()
+                .Handler<UpdateConnectDicePresentationHandler>()
                 .To(DieConnected);
-            dispatcher.Bind<DieConnectionHandler>().Then<UpdateConnectDicePresentationHandler>()
+
+            dispatcher.Bind()
+                .Handler<DieConnectionHandler>()
+                .Handler<UpdateConnectDicePresentationHandler>()
                 .To(DieDisconnected);
 
-            dispatcher.Bind<DieRollHandler>().To(DieStartedRoll);
-            dispatcher.Bind<DieRollHandler>().To(DieEndedRoll);
-            dispatcher.Bind<DieRollHandler>().To(DieStable);
+            dispatcher.Bind().Handler<DieRollHandler>().To(DieStartedRoll);
+            dispatcher.Bind().Handler<DieRollHandler>().To(DieEndedRoll);
+            dispatcher.Bind().Handler<DieRollHandler>().To(DieStable);
 
-            dispatcher.Bind<BlinkDieHandler>().To(BlinkDie);
-            dispatcher.Bind<BlinkDieOnClickHandler>().To(DieClicked);
-            
-            //dispatcher.Bind<DieChargingStateChangedHandler>().To(DieChargingStateChanged);
-            dispatcher.Bind<SwitchDieTapExpectationHandler>().To(DieExpectTap);
-            dispatcher.Bind<SwitchDieTapExpectationHandler>().To(DieIgnoreTap);
-            dispatcher.Bind<SwitchDieTapExpectationHandler>().To(DieExpectDoubleTap);
-            dispatcher.Bind<SwitchDieTapExpectationHandler>().To(DieIgnoreDoubleTap);
+            dispatcher.Bind().Handler<BlinkDieHandler>().To(BlinkDie);
+            dispatcher.Bind().Handler<BlinkDieOnClickHandler>().To(DieClicked);
 
-            dispatcher.Bind<CreateDieForNewDeviceHandler>().To(BluetoothDeviceConnected);
+            dispatcher.Bind().Handler<SwitchDieTapExpectationHandler>().To(DieExpectTap);
+            dispatcher.Bind().Handler<SwitchDieTapExpectationHandler>().To(DieIgnoreTap);
+            dispatcher.Bind().Handler<SwitchDieTapExpectationHandler>().To(DieExpectDoubleTap);
+            dispatcher.Bind().Handler<SwitchDieTapExpectationHandler>().To(DieIgnoreDoubleTap);
 
-            dispatcher.Bind<LogDieEventEventHandler>().To(DieStartedRoll);
-            dispatcher.Bind<LogDieEventEventHandler>().To(DieEndedRoll);
-            dispatcher.Bind<LogDieEventEventHandler>().To(DieStable);
-            dispatcher.Bind<LogDieEventEventHandler>().To(DieRotated);
+            dispatcher.Bind().Handler<CreateDieForNewDeviceHandler>().To(BluetoothDeviceConnected);
+
+            dispatcher.Bind().Handler<LogDieEventEventHandler>().To(DieStartedRoll);
+            dispatcher.Bind().Handler<LogDieEventEventHandler>().To(DieEndedRoll);
+            dispatcher.Bind().Handler<LogDieEventEventHandler>().To(DieStable);
+            dispatcher.Bind().Handler<LogDieEventEventHandler>().To(DieRotated);
         }
     }
 }
