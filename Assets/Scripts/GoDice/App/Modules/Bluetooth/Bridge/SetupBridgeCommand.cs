@@ -18,16 +18,19 @@ namespace GoDice.App.Modules.Bluetooth.Bridge
             _bridge = providedBridge
 #if USE_BLE_PLUGIN
                       ?? new BridgeToLib();
-#else
+#elif UNITY_EDITOR
                 ;
+#else
+            #error No bluetooth bridge provided! Simulation will work in Editor only!
 #endif
+
             _bridge.Initialize(OnSuccess, OnError, OnPerpheralDisconnected, Log.Operation);
 
             return _bridge;
         }
 
         private void OnSuccess() => Log.Message(
-            $"Bluetooth bridge initilized: {_bridge.GetType().UnderlyingSystemType.Name}");
+            $"Bluetooth bridge initialized: {_bridge.GetType().UnderlyingSystemType.Name}");
 
         private void OnError(string error)
         {
