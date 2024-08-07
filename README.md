@@ -12,17 +12,20 @@ https://youtu.be/SjlsfxbiFwc
 
 # External dependencies
 
-- Bluetooth plugin is not included in this repository due to legal issues. We strongly recommend using this plugin [Bluetooth LE for iOS, tvOS and Android](https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661). To add the Plugin to the project, do the following:
-1. Make sure your current platform in Unity is either Android or iOS
-2. Import the BLE plugin to the project.
-3. Feel free to reorder plugin's content as you like, but make sure to create an Assembly Definition (BLE in our case) for these scripts:<img src="https://github.com/ParticulaCode/GoDiceUnityDemo/assets/50739566/9ef7dbbc-07d5-49b8-8819-44d9b0b6ab60" width="200" alignment="right">
-4. Go to the folder `"Assets\Scripts\GoDice\App\Modules\Bluetooth"`, click the assembly refernece file `GoDice.App.Modules.Bluetooth` and the reference to `BLE` assembly definition (from the previous step) to the Assembly Definition Reference list (by dragging it to the end of the list), click Apply. Now everything supposed to compile.
-5. Enter the "Project Setting" and add the `USE_BLE_PLUGIN` definition to the "Scripting Define Symbols" section. Click Apply.
+1. Bluetooth plugin is not included in this repository due to legal issues. We strongly recommend using this plugin [Bluetooth LE for iOS, tvOS and Android](https://assetstore.unity.com/packages/tools/network/bluetooth-le-for-ios-tvos-and-android-26661).
 
-If you want to use another plugin for bluetooth communication, you have to make your own implementation of `IBluetoothBridge` and disable `USE_BLE_PLUGIN` define.
-- FrostLib is an in-house set of scripts.
-- We encourage you to also add [Odin Inspector](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041) to the project. It will provide you with a better inspector for simulated dice. And this is an awesome plugin in general. By default demo project has `OdinMockup` assembly to keep the code compiled, but you if you add Odin Inspector and disable `USE_ODIN_MOCKUP` 
-- Whatever plugin you'll decide to use for Bluetooth - don't forget to reference its assembly definition in `GoDice.App.Modules.Bluetooth`
+   To add the Plugin to the project, do the following:
+    - Make sure your current platform in Unity is either Android or iOS
+    - Import the BLE plugin to the project.
+    - Feel free to reorder plugin's content as you like, but make sure to create an Assembly Definition (BLE in our case) for these scripts:
+
+      <img src="https://github.com/ParticulaCode/GoDiceUnityDemo/assets/50739566/9ef7dbbc-07d5-49b8-8819-44d9b0b6ab60" width="200" alignment="right">
+    - Go to the directory `"Assets\Scripts\GoDice\App\Modules\Bluetooth"`, click the assembly refernece file `GoDice.App.Modules.Bluetooth` and the reference to `BLE` assembly definition (from the previous step) to the Assembly Definition Reference list (by dragging it to the end of the list), click Apply. Now everything supposed to compile.
+    - Enter the "Project Setting" and add the `USE_BLE_PLUGIN` definition to the "Scripting Define Symbols" section. Click Apply. If you want to use another plugin for bluetooth communication, you have to make your own implementation of `IBluetoothBridge` and disable `USE_BLE_PLUGIN` define.
+
+2. FrostLib is an in-house set of scripts.
+3. We encourage you to also add [Odin Inspector](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041) to the project. It will provide you with a better inspector for simulated dice. And this is an awesome plugin in general. By default demo project has `OdinMockup` assembly to keep the code compiled, but you if you add Odin Inspector and disable `USE_ODIN_MOCKUP` 
+4. Whatever plugin you'll decide to use for Bluetooth - don't forget to reference its assembly definition in `GoDice.App.Modules.Bluetooth`
 
 <img src="https://user-images.githubusercontent.com/50739566/143999517-9f664051-6967-4080-b336-4b05874585ef.png" width="500">
 
