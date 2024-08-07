@@ -4,7 +4,6 @@ This is a demo project on how you can communicate with GoDice. Use it as a refer
 Here you can find a tutorial video of how to build the project in Unity for Android:
 https://youtu.be/SjlsfxbiFwc
 
-TL;DR
 - The project is fully workable and demonstrates some of features of GoDice, but you need to use a third party Bluetooth plugin
 - Code is based on the GoDice companion app. Yet some parts are changed for demonstration sake and simplicity.
 - You can also extract read-write protocols for bluetooth communication with GoDice. It contains all current events, but may be extended in future.
