@@ -20,8 +20,9 @@ namespace GoDice.App.Modules.Dice.Shells
             var value = 0;
             var distance = float.MaxValue;
             foreach (var pair in _values)
-            {
-                var lDist = Vector3.Distance(axis, pair.Value);
+            {   
+                Vector3 offset = axis - pair.Value;
+                var lDist = offset.sqrMagnitude;
                 if (lDist >= distance)
                     continue;
 
